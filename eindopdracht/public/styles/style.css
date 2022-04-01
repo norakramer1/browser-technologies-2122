@@ -1,0 +1,63 @@
+/* #ece2d0
+ #384d48
+ #d1462f */
+
+
+ @font-face {
+    font-family: Basteleur-Bold;
+    src: url("Basteleur-Bold.otf"); /* IE9 Compat Modes */
+    src: local('otf/Basteleur-Bold'), format('truetype');
+}
+
+@font-face {
+    font-family: SpaceMono-Regular;
+    src: url("SpaceMono-Regular.ttf"); /* IE9 Compat Modes */
+    src: local('fonts/SpaceMono-Regular.ttf'), format('truetype');
+}
+
+
+
+html {
+    background-color: #ece2d0;
+}
+
+h1 {
+    font-family: Basteleur-Bold;
+    font-size: 700%;
+    color: #384d48;
+}
+
+section:first-of-type {
+    padding-right: 20%;
+}
+
+p, a {
+    font-family: 'Space Mono', monospace;
+    font-size: 1em;
+   
+    color: #384d48;
+}
+
+p {
+    font-size: 200%;
+}
+
+a {
+    color: #384d48;  
+    font-size: 100%; 
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav ul li  {
+    padding-right: 5%;
+    list-style-type: none;
+    font-family: SpaceMono-Regular, sans-serif; 
+    color: #384d48;
+   
+
+}
