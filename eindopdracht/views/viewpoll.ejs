@@ -3,9 +3,24 @@
 <%- include ('./partials/head.ejs') %>
 <%- include ('./partials/nav.ejs') %>
 
-    <h1>Bekijk polls</h1>
-    <p>Bekijk de polls die de admin gepost heeft en vul ze in</p>
+<h1>Bekijk polls</h1>
+<p>Bekijk de polls die de admin gepost heeft en vul ze in</p>
 
 
 
-    <%- include ('./partials/footer.ejs') %>
+
+<% data.forEach(pollList => { %>
+ 
+<h2><%= pollList.vraag %></h2>
+<form method="post" enctype="application/x-www-form-urlencoded" action="/viewanswers">
+    <input type="radio" name="answer1" value="answer1">
+    <label for="answer1"><%= pollList.antwoordA %></label>
+
+    <input type="radio" name="answer2" value="answer2">
+    <label for="answer2"><%= pollList.antwoordB %></label>
+
+    <input type="submit" value="versturen" />
+</form>
+<% }); %>
+
+<%- include ('./partials/footer.ejs') %>

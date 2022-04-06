@@ -19,74 +19,80 @@ app.use(express.static(__dirname + '/public'));
 
 // Gebruik body-parser om te lezen wat er in POST requests van de form staat
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true})); 
+app.use(bodyParser.urlencoded({extended: true,}));
 
 // respond with "hello world" when a GET request is made to the homepage
-app.get('/', (req, res) => {
-
+app.get("/", (req, res) => {
   //console.log(res)
-  res.render('home', {
-    pageTitle: 'Home'
-  })
-})
-
-// respond with "hello world" when a GET request is made to the user page
-app.get('/viewpoll', (req, res) => {
-  res.render('viewpoll', {
-    pageTitle: 'View Polls'
-  })
-})
-
-//let pollAntwoorden;
-
-// get form data and post
-app.post('/makepoll', (req, res) => {
-fs.readFile('statham.json', 'utf8', (err, data) => {
-  let pollList = JSON.parse(data)
-  let arr = {
-    "vraag": req.body.vraag,
-    "antwoordA": req.body.antwoordA,
-    "antwoordb": req.body.antwoordB
-  }
-  pollList.push(arr)
-  let pollAntwoorden = JSON.stringify(pollList, null, 2);
-  fs.writeFile('statham.json', pollAntwoorden, 'utf8', cb => {});
-})
-
-//fs.writeFile('statham.json', pollAntwoorden, 'utf8', cb  => {
-//   jsonData.push(pollAntwoorden);
-// 	});
-
-
-
-res.render('viewpoll', {
-    pageTitle: 'Poll answers'
-  })
-})
-
-
-//console.log(data);
-  
-
-
-//render questions on take poll page
-app.post('/viewpoll', (req, res) => {
-
-  fs.readFile('statham.json', (data) => {
-      var jsonData = JSON.parse(data);
-      console.log(jsonData);
+  res.render("home", {
+    pageTitle: "Home",
   });
-  
-})
+});
 
-// respond with "hello world" when a GET request is made to the admin page
-app.get('/makepoll', (req, res) => {
-  res.render('makepoll', {
-    pageTitle: 'Make new Poll'
+// respond with view poll render on viewpoll route
+app.get("/makepoll", (req, res) => {
+  res.render("makepoll", {
+    pageTitle: "Make A New Poll",
+  });
+});
+
+// get form data and post to json file, then render viewpoll view
+app.post("/makepoll", (req, res) => {
+  fs.readFile("statham.json", "utf8", (err, data) => {
+    let pollList = JSON.parse(data);
+    let arr = {
+      vraag: req.body.vraag,
+      antwoordA: req.body.antwoordA,
+      antwoordb: req.body.antwoordB,
+    };
+    pollList.push(arr);
+    let pollSubmit = JSON.stringify(pollList, null, 2);
+    fs.writeFile("statham.json", pollSubmit, "utf8", (cb) => {});
+  });
+  res.render("viewpoll", {
+    pageTitle: "Poll questions",
+  });
+});
+
+// respond with view poll render on viewpoll route
+app.get("/viewpoll", (req, res) => {
+  fs.readFile("statham.json", "utf8", (err, data) => {
+    let pollList = JSON.parse(data);
+    pollList.reverse();
+    console.log(pollList)
+
+    res.render("viewpoll", { 
+      data: pollList,
+      pageTitle: "View Polls",
+    })
   })
-})
+ 
+});
 
+//take poll answers and put results in json file, then render viewanswers
+app.post("/viewanswers", (req, res) => {
+  fs.readFile("pollanswers.json", "utf8", (err, data) => {
+    let pollList = JSON.parse(data);
+    let arr = {
+      answer1: req.body.answer1,
+      answer2: req.body.answer2,
+    };
+    pollList.push(arr);
+    let pollAntwoorden = JSON.stringify(pollList, null, 2);
+    fs.writeFile("pollanswers.json", pollAntwoorden, "utf8", (cb) => {});
+  
+    res.render("viewanswers", {
+      pageTitle: "Poll answers",
+    });
+    
+  });
+
+});
+
+
+
+
+// listen to the port
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
-
+  console.log(`Example app listening on port ${port}`);
+});
