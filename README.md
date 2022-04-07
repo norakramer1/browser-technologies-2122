@@ -73,6 +73,9 @@ De user story is:
 > Ik wil tijdens een college aan studenten een poll kunnen voorleggen met vragen en antwoorden, en de resultaten meteen laten zien.
 
 ## Wireflow
+![Wireframes app](hhttps://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/wireframes-bt.png)
+
+
 ## Features en browser technologies
 1. Nieuwe poll aanmaken
 Vul een formulier in met een vraag en 2 antwoorden. Deze word doorgestuurd naar een json file samen met een lege array voor de votes en een unique ID om ze later weer op te halen. 
