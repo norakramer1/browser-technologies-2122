@@ -70,31 +70,31 @@ Daarna kun je de resultaten zien van de poll. Je ziet hoeveel mensen antwoord A 
 ### Chrome voor macbook
 Ik heb deze website vooral bekeken en getest in Chrome. Dit is de default browser die ik gebruikt voor eigenlijk alles. Hier werkte alles zo als zou moeten. De fonts doen het, de website was snel en er waren geen rare fouten
 
-![website in Chrome Desktop op macbook](https://github.com/norakramer1/browser-technologies-2122/eindopdracht/img/chrome-desktop.png)
+![website in Chrome Desktop op macbook](https://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/chrome-desktop.png)
 
 ### Safari voor macbook 
 In Safari ging het iets minder goed dan gedacht. De custom fonts waren niet gesupport. Ik had nog niet over support nagedacht dus hier ga ik nog verder naar kijken. Hij heeft het custom font veranderd met een standaard serif font, dit is gek want ik heb als fallback wel een sans-serif font aangegeven. Verder deed alles het prima, de website was goed te bedienen en snel. 
 
-![website in Safari Desktop op macbook](https://github.com/norakramer1/browser-technologies-2122/eindopdracht/img/safari-desktop.png)
+![website in Safari Desktop op macbook](https://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/safari-desktop.png)
 
 ### Chrome voor General Mobile GM5Plus telefoon
 Ik heb de website ook geprobeerd op een oude telefoon die ik geleend heb, op deze telefoon draait op Chrome. Ook hier kon je de custom fonts niet bekijken, wel is het hier vervangen door een sans-serif font. Daarnaast is Chrome ook een keer gecrashed toen ik meerdere polls aan wilde maken. Dit kan ook toeval zijn.
 
-![website in Chrome Mobile op android telefoon](https://github.com/norakramer1/browser-technologies-2122/eindopdracht/img/chrome-mobile2.png)
+![website in Chrome Mobile op android telefoon](hhttps://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/chrome-mobile.png)
 
 ### Iphone 8
 Als laatste heb ik de de website ook nog getest op mijn eigen telefoon. Ook hier was er een probleem met de fonts maar werkte de rest prima. Hier is het font ook vervangen door een serif font.
 
-![website in Safari Mobile op iphone telefoon](https://github.com/norakramer1/browser-technologies-2122/eindopdracht/img/safari-mobile.png)
+![website in Safari Mobile op iphone telefoon](https://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/safari-mobile.png)
 
 ## Tests zonder Javascript en CSS
 Eerst heb ik de website getest zonder Javascript en er waren geen problemen. Bijna alle features werken via de backend en werken dus ook zonder frontend javascript.
 
-![website op desktop zonder Javascript](https://github.com/norakramer1/browser-technologies-2122/eindopdracht/img/javascript-off.png)
+![website op desktop zonder Javascript](https://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/javascript-off.png)
 
 Daarna heb ik de website getest zonder CSS en Javascript. Ook al was het onoverzichtelijk zonder styling was wel alles zichtbaar.
 
-![website op desktop zonder CSS en Javascript](https://github.com/norakramer1/browser-technologies-2122/eindopdracht/img/css-off.png)
+![website op desktop zonder CSS en Javascript](https://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/css-off.png)
 
 ## How to use
 1. Clone deze repository door dit in de terminal te plaatsen:
@@ -115,7 +115,7 @@ Daarna heb ik de website getest zonder CSS en Javascript. Ook al was het onoverz
 - [uuid](https://www.npmjs.com/package/uuid)
 
 ## DevDependencies 
-- Nodemon
+- [Nodemon](https://www.npmjs.com/package/nodemon)
 
 ## Wishlist
 - Betere styling (my god)
@@ -124,3 +124,9 @@ Daarna heb ik de website getest zonder CSS en Javascript. Ook al was het onoverz
 
 ## license
 Dit project gebruikt het MIT license
+
+## Bronnen
+- [Can I Use](https://caniuse.com/)
+- [FileSystem in Node](https://nodejs.org/api/fs.html)
+- [UUID](https://www.npmjs.com/package/uuid)
+
