@@ -49,7 +49,7 @@ app.post("/makepoll", (req, res) => {
     let pollSubmit = JSON.stringify(pollList, null, 2);
     fs.writeFile("statham.json", pollSubmit, "utf8", (cb) => {});
   });
-  res.render("viewpoll", {
+  res.render("home", {
     pageTitle: "Poll questions",
   });
 });
@@ -82,9 +82,11 @@ app.post("/viewanswers", (req, res) => {
     fs.writeFile("pollanswers.json", pollAntwoorden, "utf8", (cb) => {});
   
     res.render("viewanswers", {
+      pollData: pollAntwoorden,
       pageTitle: "Poll answers",
+
     });
-    
+
   });
 
 });
