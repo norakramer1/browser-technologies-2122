@@ -105,15 +105,11 @@ app.post("/:id", (req, res) => {
 //view poll results on poll results page
 app.get("/viewanswers", (req, res) => {
   fs.readFile('statham.json', (err, data) => {
-    //let pollList = JSON.parse(data);
     console.log(pollVotesA);
-//, pollVotesA, pollVotesB
     res.render("viewanswers", {
     pageTitle: 'poll results',
-    // data: pollList,
     hoeveelheidA: pollVotesA,
     hoeveelheidB: pollVotesB,
-      // hoeveelheidB: "Poll answers",
     });
   });
 });
