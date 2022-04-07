@@ -8,11 +8,38 @@
       "woord2",
       "woord1",
       "woord1",
+      "woord1",
+      "woord1",
+      "woord1",
       "woord2",
       "woord2",
       "woord2",
-      "woord2",
-      "woord2"
+      "woord1"
+    ]
+  },
+  {
+    "id": "dccf0a05-6a08-4e81-a38f-50707158baa9",
+    "vraag": "sjsjjs",
+    "antwoordA": "jdjdjd",
+    "antwoordB": "dhdhd",
+    "votes": [
+      "dhdhd",
+      "jdjdjd"
+    ]
+  },
+  {
+    "id": "c79800c8-4f5e-458f-9c84-8da85acc8b14",
+    "vraag": "dhdhdh",
+    "antwoordA": "hdhdhd",
+    "antwoordB": "dhhdh",
+    "votes": [
+      "hdhdhd",
+      "dhhdh",
+      "dhhdh",
+      "hdhdhd",
+      "hdhdhd",
+      "dhhdh",
+      "hdhdhd"
     ]
   }
 ]
