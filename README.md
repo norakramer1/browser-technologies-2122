@@ -73,7 +73,7 @@ De user story is:
 > Ik wil tijdens een college aan studenten een poll kunnen voorleggen met vragen en antwoorden, en de resultaten meteen laten zien.
 
 ## Wireflow
-![Wireframes app](hhttps://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/wireframes-bt.png)
+![Wireframes app](https://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/wireframes-bt.png)
 
 
 ## Features en browser technologies
