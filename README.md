@@ -1,7 +1,24 @@
 # Readme for browser technologies 2122
-In the readme i will put research on assignments 1 and 2 
+In deze readme staat de documentatie voor opdracht 1 en 2 en alle documentatie voor de eindopdracht
 
-## 1 NPM install Progressive enhancement
+## Inhoud
+
+- [Opdracht 1](#opdracht-1)
+- [Bronnen](#Bronnen)
+- [Opdracht 2](#opdracht-2)
+- [Eindopdracht](#Concept-eindopdracht)
+- [Wireflow](#Wireflow)
+- [Features](#Features-en-browser-technologies)
+- [4 Browsers waar het in getest is en support](#4-Browsers-waar-het-in-getest-is-en-support)
+- [Tests zonder Javascript en CSS](#Tests-zonder-Javascript-en-CSS)
+- [Use](#How-to-use)
+- [Dependencies](#Dependencies)
+- [DevDependencies](#DevDependencies)
+- [Wishlist](#Wishlist)
+- [License](#License)
+- [Nog meer bronnen](#Bronnen2)
+
+## Opdracht 1
 Voor deze opdracht heb ik informatie opgezocht over Progressive Enhancement en dit in de website gebruikt.
 
 Progressive enhancement is een methode die de focus legt op de content van de webpagina eerst. De content van de pagina (tekst, foto’s, etc) word gescheiden van semantiek van webdesign (HTML etc.) Het doel is om te zorgen dat het web voor iedereen bruikbaar blijft. In de kern moet iedereen de meest belangrijke content op een pagina kunnen zien, dus ook als je de content op een oude computer bekijkt of slecht internet hebt. Mensen met de nieuwste computers en het beste internet kunnen dus een website zien die er misschien mooier uitziet maar dezelfde content laat zien.
@@ -22,7 +39,7 @@ Progressive Enhancement - MDN Web Docs Glossary: Definitions of Web-related term
 Wikipedia contributors. (2022, 17 maart). Progressive enhancement. Wikipedia. Geraadpleegd op 23 maart 2022, van 
 [Wikipedia](https://en.wikipedia.org/wiki/Progressive_enhancement)
 
-## 2 Breek het web
+## Opdracht 2
 Voor breek het web heb ik gekeken naar cookies en local storage en dit gedocumenteerd in deze readme.
 
 1. Cookies niet accepteren
@@ -125,7 +142,7 @@ Daarna heb ik de website getest zonder CSS en Javascript. Ook al was het onoverz
 ## license
 Dit project gebruikt het MIT license
 
-## Bronnen
+## Bronnen2
 - [Can I Use](https://caniuse.com/)
 - [FileSystem in Node](https://nodejs.org/api/fs.html)
 - [UUID](https://www.npmjs.com/package/uuid)
