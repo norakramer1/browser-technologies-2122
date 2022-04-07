@@ -76,14 +76,27 @@ nav ul li  {
 }
 
 section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    text-align: center;
+    margin: 5% 5% 0;
+    padding: 2%;
+    max-width: 40%;
     border: 2px solid #384d48;
 }
 
 label {
     font-family: SpaceMono-Regular, monospace;
     color: #384d48;
-    display: block;
     padding: 1% 0 1% 0;
+    display: block;
+}
+
+label.inline {
+display: inline;
 }
 
 input::placeholder {

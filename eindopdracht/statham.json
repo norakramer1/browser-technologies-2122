@@ -1,32 +1,18 @@
 [
   {
-    "vraag": "aaaaaaa",
-    "antwoordA": "aaaaa",
-    "antwoordb": "aaaaa"
-  },
-  {
-    "vraag": "bbbbb",
-    "antwoordA": "bbbbb",
-    "antwoordb": "hhhhh"
-  },
-  {
-    "vraag": "njkkjsdjkjksd",
-    "antwoordA": "slsjsj",
-    "antwoordb": "sjsjjssj"
-  },
-  {
-    "vraag": "waar ga je liever heen",
-    "antwoordA": "a",
-    "antwoordb": "b"
-  },
-  {
-    "vraag": "waar ga je liever heen",
-    "antwoordA": "a",
-    "antwoordb": "b"
-  },
-  {
-    "vraag": "jsjsj",
-    "antwoordA": "sjjsjs",
-    "antwoordb": "sjsj"
+    "id": "13c441ee-9d21-4206-a9a4-3c6e166c0dfa",
+    "vraag": "iets met woorden",
+    "antwoordA": "woord1",
+    "antwoordB": "woord2",
+    "votes": [
+      "woord2",
+      "woord1",
+      "woord1",
+      "woord2",
+      "woord2",
+      "woord2",
+      "woord2",
+      "woord2"
+    ]
   }
 ]

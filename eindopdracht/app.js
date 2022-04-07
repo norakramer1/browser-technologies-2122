@@ -3,6 +3,7 @@ const hostname = '127.0.0.1';
 const port = 5500;
  // let ejs = require('ejs');
 const bodyParser = require('body-parser');
+const {v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 const express = require('express')
 const app = express()
@@ -36,14 +37,17 @@ app.get("/makepoll", (req, res) => {
   });
 });
 
+let voteAnswers = [];
 // get form data and post to json file, then render viewpoll view
 app.post("/makepoll", (req, res) => {
   fs.readFile("statham.json", "utf8", (err, data) => {
     let pollList = JSON.parse(data);
     let arr = {
+      id: uuidv4(),
       vraag: req.body.vraag,
       antwoordA: req.body.antwoordA,
-      antwoordb: req.body.antwoordB,
+      antwoordB: req.body.antwoordB,
+      votes: voteAnswers,
     };
     pollList.push(arr);
     let pollSubmit = JSON.stringify(pollList, null, 2);
@@ -59,7 +63,7 @@ app.get("/viewpoll", (req, res) => {
   fs.readFile("statham.json", "utf8", (err, data) => {
     let pollList = JSON.parse(data);
     pollList.reverse();
-    console.log(pollList)
+    // console.log(pollList)
 
     res.render("viewpoll", { 
       data: pollList,
@@ -69,29 +73,50 @@ app.get("/viewpoll", (req, res) => {
  
 });
 
-//take poll answers and put results in json file, then render viewanswers
-app.post("/viewanswers", (req, res) => {
-  fs.readFile("pollanswers.json", "utf8", (err, data) => {
-    let pollList = JSON.parse(data);
-    let arr = {
-      answer1: req.body.answer1,
-      answer2: req.body.answer2,
-    };
-    pollList.push(arr);
-    let pollAntwoorden = JSON.stringify(pollList, null, 2);
-    fs.writeFile("pollanswers.json", pollAntwoorden, "utf8", (cb) => {});
-  
-    res.render("viewanswers", {
-      pollData: pollAntwoorden,
-      pageTitle: "Poll answers",
+let pollVotesA;
+let pollVotesB;
 
-    });
+//take poll answers and put results in json file, then render viewanswers
+app.post("/:id", (req, res) => {
+  voteAnswers.push(req.body.answer)
+  // console.log(voteAnswers)
+  fs.readFile("statham.json", "utf8", (err, data) => {
+    let pollList = JSON.parse(data);
+    // console.log(pollList);
+    pollList.forEach(item => {
+      if (item.id === req.params.id) {
+        item.votes.push(req.body.answer);
+    pollVotesA = item.votes.filter(vote => vote === item.antwoordA).length;
+    pollVotesB = item.votes.filter(vote => vote === item.antwoordB).length;
+    // console.log(pollVotesA, pollVotesB)
+      }
+    })
+    let pollAntwoorden = JSON.stringify(pollList, null, 2);
+    fs.writeFile("statham.json", pollAntwoorden, "utf8", (cb) => {});
+
+    res.redirect("viewanswers")
 
   });
+
 
 });
 
 
+//view poll results on poll results page
+app.get("/viewanswers", (req, res) => {
+  fs.readFile('statham.json', (err, results) => {
+    console.log(pollVotesA, pollVotesB);
+
+ });
+  
+    res.render("viewanswers", {
+    pageTitle: 'poll results',
+    hoeveelheidA: pollVotesA,
+    hoeveelheidB: pollVotesB,
+      // hoeveelheidB: "Poll answers",
+
+    });
+  });
 
 
 // listen to the port

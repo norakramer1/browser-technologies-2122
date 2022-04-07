@@ -13,13 +13,13 @@
  
 <h2><%= pollList.vraag %></h2>
 
-<form method="post" enctype="application/x-www-form-urlencoded" action="/viewanswers">
+<form method="post" enctype="application/x-www-form-urlencoded" action="/<%- pollList.id %>">
     <fieldset>
-    <input type="radio" name="answer1" value="answer1">
-    <label for="answer1"><%= pollList.antwoordA %></label>
+    <input type="radio" id="<%= pollList.antwoordA %>" name="answer" value="<%= pollList.antwoordA %>">
+    <label class="inline" for="<%= pollList.antwoordA %>"><%= pollList.antwoordA %></label>
 
-    <input type="radio" name="answer2" value="answer2">
-    <label for="answer2"><%= pollList.antwoordb %></label>
+    <input  type="radio" id="<%= pollList.antwoordB %>" name="answer" value="<%= pollList.antwoordB %>">
+    <label class="inline" for="<%= pollList.antwoordB %>"><%= pollList.antwoordB %></label>
 
     <input type="submit" value="versturen" />
 </fieldset>
