@@ -97,6 +97,30 @@ Daarna heb ik de website getest zonder CSS en Javascript. Ook al was het onoverz
 ![website op desktop zonder CSS en Javascript](https://github.com/norakramer1/browser-technologies-2122/eindopdracht/img/css-off.png)
 
 ## How to use
+1. Clone deze repository door dit in de terminal te plaatsen:
+`git clone` https://github.com/norakramer1/eindopdracht/browser-technologies-2122.git
+
+2. Installeer het project door het volgende in de terminal in te voeren:
+`npm install`
+
+3. Voer het project uit door dit in de terminal te plaatsen:
+`npm start`
+
+4. Maak een poll of vul ze in!
+
 ## Dependencies
+- [body-parser](https://www.npmjs.com/package/body-parser)
+- [ejs](https://ejs.co/)
+- [express](http://expressjs.com/) (middleware)
+- [uuid](https://www.npmjs.com/package/uuid)
+
+## DevDependencies 
+- Nodemon
+
 ## Wishlist
+- Betere styling (my god)
+- Drag en drop polls?
+- Cleanere code
+
 ## license
+Dit project gebruikt het MIT license
