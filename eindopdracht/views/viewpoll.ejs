@@ -1,5 +1,3 @@
-
-
 <%- include ('./partials/head.ejs') %>
 <%- include ('./partials/nav.ejs') %>
 
@@ -9,24 +7,32 @@
 <section>
 
     <h1>Bekijk polls</h1>
-<p>Bekijk de polls die de admin gepost heeft en vul ze in</p>
-
-<% data.forEach(pollList => { %>
- 
+    <p>Bekijk de polls die de admin gepost heeft en vul ze in</p>
 
 
-<form method="post" enctype="application/x-www-form-urlencoded" action="/<%- pollList.id %>" class="border">
-    <h2><%= pollList.vraag %></h2>
-    
-    <input type="radio" id="<%= pollList.antwoordA %>" name="answer" value="<%= pollList.antwoordA %>"required>
-    <label class="inline" for="<%= pollList.antwoordA %>"><%= pollList.antwoordA %></label>
+    <% data.forEach(pollList => { %>
 
-    <input  type="radio" id="<%= pollList.antwoordB %>" name="answer" value="<%= pollList.antwoordB %>"required>
-    <label class="inline" for="<%= pollList.antwoordB %>"><%= pollList.antwoordB %></label>
 
-    <input type="submit" value="versturen" />
-</form>
-<% }); %>
+    <form method="post" enctype="application/x-www-form-urlencoded" action="/<%- pollList.id %>"
+        class="border draggable" draggable="true">
+        <h2><%= pollList.vraag %></h2>
+
+        <input type="radio" id="<%= pollList.antwoordA %>" name="answer" value="<%= pollList.antwoordA %>" required>
+        <label class="inline" for="<%= pollList.antwoordA %>"><%= pollList.antwoordA %></label>
+
+        <input type="radio" id="<%= pollList.antwoordB %>" name="answer" value="<%= pollList.antwoordB %>" required>
+        <label class="inline" for="<%= pollList.antwoordB %>"><%= pollList.antwoordB %></label>
+
+        <input type="submit" value="versturen" />
+    </form>
+    <% }); %>
+
+    <div class="drop-zone">
+    </div>
+
+    <div class="drop-zone">
+        <p>trashcan</p>
+    </div>
 
 </section>
 

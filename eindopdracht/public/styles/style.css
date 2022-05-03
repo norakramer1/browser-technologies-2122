@@ -38,6 +38,10 @@ body.darkmode article {
    border: 2px solid #ece2d0;
 }
 
+.remove {
+   display: none;
+}
+
 h1, h2, h3 {
    font-family: Basteleur-Bold;
  
@@ -193,11 +197,22 @@ form.border {
    border: 2px solid #384d48;
    margin: 2% 2% 0;
    padding: 2%;
-
+cursor: move;
 }
 
 body.darkmode {
 background-color: rgb(22, 22, 22);
+}
+
+div.drop-zone {
+   background-color: #aae9db;
+   height: 200px;
+   width: 200px;
+}
+
+
+.draggables.dragging {
+   opacity: .5;
 }
 
 @media only screen and (max-width: 1300px) {
