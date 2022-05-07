@@ -2,12 +2,15 @@
 // DARKMODE
 const darkEl = document.querySelector('body');
 const buttonEl = document.querySelector('button.switch');
+const trashImg = document.querySelector('img');
 
 function darkMode() {
     if (buttonEl.innerHTML == 'Make lightmode') {
         buttonEl.innerHTML = 'Make darkmode';
+        trashImg.src = "img/trash.png";
     } else {
         buttonEl.innerHTML = 'Make lightmode';
+        trashImg.src = "img/trash-light.png";
     }
 
     darkEl.classList.toggle('darkmode')
