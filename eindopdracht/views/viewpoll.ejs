@@ -7,12 +7,18 @@
 <section>
 
     <h1>Bekijk polls</h1>
-    <p>Bekijk de polls die de admin gepost heeft en vul ze in</p>
+    <p>Bekijk de polls die de admin gepost heeft en vul ze in. Drag en drop de polls die je niet wilt invullen.</p>
 
 
+   
+
+</section>
+
+<section>
+
+    <div>
     <% data.forEach(pollList => { %>
-
-
+        
     <form method="post" enctype="application/x-www-form-urlencoded" action="/<%- pollList.id %>"
         class="border draggable" draggable="true">
         <h2><%= pollList.vraag %></h2>
@@ -27,13 +33,16 @@
     </form>
     <% }); %>
 
-    <div class="drop-zone">
-    </div>
+</div>
 
-    <div class="drop-zone">
-        <p>trashcan</p>
-    </div>
+
+
+<div class="drop-zone">
+    <img src="img/trash.png" alt="trashcan icon">
+</div>
 
 </section>
+
+
 
 <%- include ('./partials/footer.ejs') %>

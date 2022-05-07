@@ -8,5 +8,16 @@
       "moeilijker"
     ],
     "remove": []
+  },
+  {
+    "id": "186f4e19-616a-4e8a-ae93-ffa2899b6d6e",
+    "vraag": "ben je klaar om dit vak af te ronden?",
+    "antwoordA": "ja pls",
+    "antwoordB": "nee helaas",
+    "votes": [
+      "nee helaas",
+      "nee helaas"
+    ],
+    "remove": []
   }
 ]

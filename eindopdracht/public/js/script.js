@@ -1,16 +1,27 @@
-//const darkEl = document.querySelector('body');
-// const buttonEl = document.querySelector('button.switch');
-// const draggables = document.querySelectorAll('.border');
+
+// DARKMODE
+const darkEl = document.querySelector('body');
+const buttonEl = document.querySelector('button.switch');
+
+function darkMode() {
+    if (buttonEl.innerHTML == 'Make lightmode') {
+        buttonEl.innerHTML = 'Make darkmode';
+    } else {
+        buttonEl.innerHTML = 'Make lightmode';
+    }
+
+    darkEl.classList.toggle('darkmode')
+  
+    
+}
+
+buttonEl.addEventListener('click', darkMode)
+
+// DRAG AND DROP TRASH HEHE
 const draggables = document.querySelectorAll('.draggable');
 const dropZones = document.querySelectorAll('.drop-zone');
 
-
-// function darkMode() {
-//     darkEl.classList.toggle('darkmode')
-// }
-
 draggables.forEach(draggable => {
-   //console.log(draggable);
     draggable.addEventListener('dragstart', () => {
         draggable.classList.add('dragging')
     })
@@ -18,19 +29,18 @@ draggables.forEach(draggable => {
         draggable.classList.remove('dragging')
 
     })
-
 })
-
-console.log(dropZones)
 
 
 dropZones.forEach(dropZone => {
     dropZone.addEventListener('dragover', e => {
+        
         e.preventDefault();
         const draggableItem = document.querySelector('.dragging');
-        dropZone.appendChild(draggableItem)
+          dropZone.appendChild(draggableItem).remove();
+          
     })
-    //   draggables.remove();
 })
 
-// buttonEl.addEventListener('click', darkMode)
+//const formItem = document.querySelector('.dragging');
+// DELETE ELEMENT INSIDE DIV
