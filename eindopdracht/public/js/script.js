@@ -1,8 +1,8 @@
-
 // DARKMODE
 const darkEl = document.querySelector('body');
 const buttonEl = document.querySelector('button.switch');
 const trashImg = document.querySelector('img');
+
 
 function darkMode() {
     if (buttonEl.innerHTML == 'Make lightmode') {
@@ -14,19 +14,22 @@ function darkMode() {
     }
 
     darkEl.classList.toggle('darkmode')
-  
-    
+
+
 }
+
 
 buttonEl.addEventListener('click', darkMode)
 
 // DRAG AND DROP TRASH HEHE
 const draggables = document.querySelectorAll('.draggable');
-const dropZones = document.querySelectorAll('.drop-zone');
+const dropZone = document.querySelector('.drop-zone');
+let draggableItem;
 
 draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', () => {
         draggable.classList.add('dragging')
+        draggableItem = document.querySelector('.dragging');
     })
     draggable.addEventListener('dragend', () => {
         draggable.classList.remove('dragging')
@@ -34,16 +37,11 @@ draggables.forEach(draggable => {
     })
 })
 
-
-dropZones.forEach(dropZone => {
+if (dropZone) {
     dropZone.addEventListener('dragover', e => {
-        
         e.preventDefault();
-        const draggableItem = document.querySelector('.dragging');
-          dropZone.appendChild(draggableItem).remove();
-          
-    })
-})
+        draggableItem.remove();
 
-//const formItem = document.querySelector('.dragging');
-// DELETE ELEMENT INSIDE DIV
+    })
+
+}

@@ -209,7 +209,6 @@ input[type=text] {
    padding: 20px 0 20px 10px;
    width: 60%;
    border: 2px solid #384d48;
-   /* max-width: 80%; */
 }
 
 form {
@@ -230,20 +229,30 @@ form.border:last-of-type {
 
 body.darkmode {
    background-color: rgb(22, 22, 22);
-   height: 1005;
+   height: 110vh;
 
 }
-
+@supports (display: grid) {
 div.drop-zone {
    border: 5px dashed #384d48;
    height: 200px;
    width: 200px;
    display: grid;
    place-content: center;
+   }
+}
+
+@supports not (display:grid) {
+   div.drop-zone{
+      border: 5px dashed #384d48;
+      height: 200px;
+      width: 200px;
+      display: flex;
+      place-content: center;  
+   }
 }
 
  div img {
- 
    height: 100px;
    width: 100px;
 }
