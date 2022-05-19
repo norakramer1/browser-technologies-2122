@@ -17,6 +17,7 @@ In deze readme staat de documentatie voor opdracht 1 en 2 en alle documentatie v
 - [Wishlist](#Wishlist)
 - [License](#License)
 - [Nog meer bronnen](#Bronnen2)
+- [Herkansing aanpassingen](#)
 
 ## Opdracht 1
 Voor deze opdracht heb ik informatie opgezocht over Progressive Enhancement en dit in de website gebruikt.
@@ -145,8 +146,29 @@ Daarna heb ik de website getest zonder CSS en Javascript. Ook al was het onoverz
 ## license
 Dit project gebruikt het MIT license
 
-## Bronnen2
+## Bronnen 2
 - [Can I Use](https://caniuse.com/)
 - [FileSystem in Node](https://nodejs.org/api/fs.html)
 - [UUID](https://www.npmjs.com/package/uuid)
+
+## Herkansing aanpassingen
+
+### Feedback en aanpassingen
+
+> fonts fallback
+Ik heb voor elk font een fallback van serif of monospace toegevoegd. In de eerst versie maakte ik gebruik van lokale fonts die met `@font-face` werden ingeladen. Ik heb uiteindelijk voor een Google font gekozen wat ik ophaal van fonts.google.com. Dit werkte eigenlijk overal in een keer.
+
+> evt drag & drop prullenbak toevoegen
+Ik heb op desktop, niet op mobiel een optie toegevogd om de polls die ingevuld moeten worden te verwijderen door ze over een div te hoveren. Ik heb dit voor mobiel niet gebruikt omdat deze API niet in alle mobiele browsers werkt. Je zou hiervoor wel kunnen werken met de Touch API.
+
+> @supports niet gebruikt dus geen CSS fallback
+Over het algemeen heb ik de CSS simpel gehouden maar voor het stylen van een aantal dingen heb ik grid gebruikt. Dit werkt nu alleen als de browser het support anders gaat het over naar flexbox. Verder heb ik de pseudoselector `::placeholder` gebruikt en hier ook een `@supports` voor gebruikt omdat IE dit niet [support](https://caniuse.com/?search=%3A%3Aplaceholder).
+
+
+
+### Tests
+
+![Aangespaste website in Safari](https://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/nieuw-safari-web.png)
+
+![Aangespaste website in Chrome](https://github.com/norakramer1/browser-technologies-2122/blob/main/eindopdracht/public/img/nieuw-chrome-web.png)
 

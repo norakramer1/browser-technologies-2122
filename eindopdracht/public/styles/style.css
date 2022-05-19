@@ -63,9 +63,20 @@ body.darkmode input[type=text] {
  
 } 
 
-body.darkmode input[type=text]::placeholder {
-   color: #ece2d076;
+/* https://stackoverflow.com/questions/35000865/css-supports-pseudo-element 
+@supports for pseudo elements */
+@supports selector(::placeholder)  {
+   body.darkmode input[type=text]::placeholder {
+      color: #ece2d076;
+   }
 }
+
+@supports not selector(::placeholder)  {
+   body.darkmode input[type=text] {
+      color: #ece2d076;
+   }
+}
+
 
 
 h1,
@@ -226,9 +237,21 @@ display: inline;
    padding: 0 10% 5% 0;
 }
 
-input::placeholder {
-   color: #384d4879;
+/* https://stackoverflow.com/questions/35000865/css-supports-pseudo-element 
+@supports for pseudo elements */
+@supports selector(::placeholder)  {
+   input::placeholder {
+      color: #384d4879;
+   }
 }
+
+@supports not selector(::placeholder)  {
+   input {
+      color: #ece2d0;
+   }
+}
+
+
 
 input[type=text] {
    font-family: 'Space Mono', monospace;
