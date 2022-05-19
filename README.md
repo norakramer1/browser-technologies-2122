@@ -17,7 +17,7 @@ In deze readme staat de documentatie voor opdracht 1 en 2 en alle documentatie v
 - [Wishlist](#Wishlist)
 - [License](#License)
 - [Nog meer bronnen](#Bronnen2)
-- [Herkansing aanpassingen](#)
+- [Herkansing aanpassingen](#herkansing-aanpassingen)
 
 ## Opdracht 1
 Voor deze opdracht heb ik informatie opgezocht over Progressive Enhancement en dit in de website gebruikt.
@@ -163,8 +163,6 @@ Ik heb op desktop, niet op mobiel een optie toegevogd om de polls die ingevuld m
 
 > @supports niet gebruikt dus geen CSS fallback
 Over het algemeen heb ik de CSS simpel gehouden maar voor het stylen van een aantal dingen heb ik grid gebruikt. Dit werkt nu alleen als de browser het support anders gaat het over naar flexbox. Verder heb ik de pseudoselector `::placeholder` gebruikt en hier ook een `@supports` voor gebruikt omdat IE dit niet [support](https://caniuse.com/?search=%3A%3Aplaceholder).
-
-
 
 ### Tests
 
